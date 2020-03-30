@@ -15,6 +15,11 @@ class Home extends CI_Controller
     $data['title'] = 'Dashboard';
     $data['sektor_1'] = $this->Sektor_1_model->getAllMonitoringdata();
 
+
+    // note : ini ngambil data dari methode getTemperature(), terus di render ke view lewat variabel temperatur
+    // coba liat di home.php line 34
+    $data['temperatur'] = $this->Sektor_1_model->getTemperature();
+
     $this->load->view('templates/header', $data);
     $this->load->view('templates/sidebar');
     $this->load->view('home', $data);

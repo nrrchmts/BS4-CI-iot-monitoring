@@ -31,8 +31,12 @@
                     Temperatur
                   </div>
                   <div class="h5 mb-0 font-weight-bold text-gray-800">
-                    <!-- <?= $sektor_1['suhu_air'];  ?> -->
-                    24<sup>o</sup>C
+                    <?php
+                      // note : kenapa hanya s nama atributnya?
+                      // coba liat query nya di getTemperature() model
+                      echo $temperatur['s'];
+                    ?>
+                    <sup>o</sup>C
                   </div>
                 </div>
                 <div class="col-auto">
@@ -258,5 +262,5 @@
   <!-- Notes
   .data card merupakan 1 data terbaru
   .data grafik dapat diubah berdasarkan kategori/parameter
-  .data tabel menggunakan pagination 10 baris dan dimulai dari data terbaru 
+  .data tabel menggunakan pagination 10 baris dan dimulai dari data terbaru
   -->

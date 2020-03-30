@@ -12,6 +12,12 @@ class Sektor_1_model extends CI_Model
     return $this->db->get('sektor_1')->result_array();
   }
 
+  public function getTemperature()
+  {
+    $query = $this->db->query("SELECT suhu_air as s FROM sektor_1 ORDER BY id DESC LIMIT 1");
+    return $query->row_array();
+  }
+
   // public function viewCard()
   // {
   //   return $query = SELECT * FROM `sektor_1` ORDER BY `id` DESC limit 1;
@@ -29,7 +35,7 @@ class Sektor_1_model extends CI_Model
 //   public $kadar_amonia;
 //   public $volume_air;
 
-//   // public $image = "default.jpg"; 
+//   // public $image = "default.jpg";
 
 //   public function rules()
 //   {
