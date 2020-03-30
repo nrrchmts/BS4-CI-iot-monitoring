@@ -90,7 +90,7 @@
                 <tbody>
                   <?php foreach ($sektor_1 as $sektor1) : ?>
                     <tr>
-                      <th><?= $sektor1['date']; ?></th>
+                      <td><?= $sektor1['date'] . ',&nbsp;' . $sektor1['time']; ?></td>
                       <td><?= $sektor1['suhu_air'] . '<sup>o</sup>C'; ?></td>
                     </tr>
                   <?php endforeach; ?>
