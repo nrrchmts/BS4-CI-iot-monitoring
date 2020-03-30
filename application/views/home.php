@@ -31,10 +31,10 @@
                     Temperatur
                   </div>
                   <div class="h5 mb-0 font-weight-bold text-gray-800">
-                    <?php
+                    <?=
                       // note : kenapa hanya s nama atributnya?
                       // coba liat query nya di getTemperature() model
-                      echo $temperatur['s'];
+                      $temperatur['s'];
                     ?>
                     <sup>o</sup>C
                   </div>
