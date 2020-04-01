@@ -64,6 +64,7 @@
     });
   </script>
 
+  <!-- chart -->
   <script>
     var ctx = document.getElementById('Chart2');
     var myChart = new Chart(ctx, {
@@ -128,7 +129,12 @@
 
   <script type="text/javascript">
     $(document).ready(function() {
-      $("#example").DataTable();
+      $("#example").DataTable({
+        "order": [
+          [0, "desc"]
+        ]
+      });
+
     });
   </script>
   </body>

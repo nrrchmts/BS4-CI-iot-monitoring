@@ -16,11 +16,13 @@
     </nav>
     <!-- End of Topbar -->
 
-    <!-- Begin Page Content -->
+    <!-- Main Content -->
     <div class="container-fluid">
 
+      <!--  -->
       <div class="row">
-        <div class="col-md">
+
+        <div class="col-sm">
           <!-- chart -->
           <div class="row">
             <!-- Area Chart -->
@@ -72,7 +74,7 @@
         </div>
 
         <!-- column tables -->
-        <div class="col-md">
+        <div class="col-sm">
           <!-- Content Row Tables-->
           <div class="card shadow table-output">
             <div class=" card-header py-3">
@@ -90,7 +92,7 @@
                 <tbody>
                   <?php foreach ($sektor_1 as $sektor1) : ?>
                     <tr>
-                      <td><?= $sektor1['date'] . ',&nbsp;' . $sektor1['time']; ?></td>
+                      <td><?= $sektor1['date']; ?></td>
                       <td><?= $sektor1['suhu_air'] . '<sup>o</sup>C'; ?></td>
                     </tr>
                   <?php endforeach; ?>
@@ -99,7 +101,9 @@
             </div>
           </div>
         </div>
+
       </div>
+
     </div>
     <!-- /.container-fluid -->
   </div>

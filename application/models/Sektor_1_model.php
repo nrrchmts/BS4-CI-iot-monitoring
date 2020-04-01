@@ -5,9 +5,6 @@ class Sektor_1_model extends CI_Model
 {
   public function getAllMonitoringdata()
   {
-    // $query = $this->db->query("SELECT*FROM sektor_1 ORDER BY id DESC LIMIT 1");
-    // return $query->row_array();
-    // $this->db->limit(10); //limit bari yang tampil
     $this->db->order_by('id', 'DESC'); //Sorting by ID
     return $this->db->get('sektor_1')->result_array();
   }
