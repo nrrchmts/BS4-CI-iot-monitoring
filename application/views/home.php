@@ -181,7 +181,7 @@
             </div>
             <div class="card-body">
               <!-- DataTales Example -->
-              <table id="example" class="table table-responsive-sm table-striped table-hover text-center">
+              <table id="dataTable" class="table table-responsive-sm table-striped table-hover text-center">
                 <thead>
                   <tr>
                     <th scope="col">Tanggal & Waktu</th>
