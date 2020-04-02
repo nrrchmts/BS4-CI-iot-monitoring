@@ -30,6 +30,7 @@ class Home extends CI_Controller
   {
     $data['title'] = 'Temperatur';
     $data['sektor_1'] = $this->Sektor_1_model->getAllMonitoringdata();
+    $data['data_grafik'] = $this->Sektor_1_model->getMonitoringGraph10();
 
     $this->load->view('templates/header', $data);
     $this->load->view('templates/sidebar');

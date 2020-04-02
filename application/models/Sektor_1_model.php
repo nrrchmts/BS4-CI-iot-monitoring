@@ -9,6 +9,13 @@ class Sektor_1_model extends CI_Model
     return $this->db->get('sektor_1')->result_array();
   }
 
+  public function getMonitoringGraph10()
+  {
+    $this->db->order_by('id', 'DESC'); //Sorting by ID
+    $this->db->limit(10);
+    return $this->db->get('sektor_1')->result_array();
+  }
+
   public function getTemperature()
   {
     $query = $this->db->query("SELECT suhu_air as s FROM sektor_1 ORDER BY id DESC LIMIT 1");

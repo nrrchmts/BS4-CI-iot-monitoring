@@ -141,7 +141,7 @@
         </div>
       </div>
 
-      <!-- Chart -->
+      <!-- Chart Row -->
       <div class="row">
         <div class="col-md">
           <!-- Time Series Chart -->
@@ -151,20 +151,21 @@
             </div>
             <div class="card-body">
               <div class="chart-area">
-                <canvas id="charts"></canvas>
+                <canvas id="myChart"></canvas>
               </div>
             </div>
           </div>
         </div>
+
         <div class="col-md">
           <!-- Area Chart -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Area Chart</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Uji Coba Chart</h6>
             </div>
             <div class="card-body">
               <div class="chart-area">
-                <canvas id="Chart2"></canvas>
+                <canvas id="charts"></canvas>
               </div>
             </div>
           </div>
@@ -214,16 +215,16 @@
   </div>
   <!-- End Main Content -->
 
-  <!-- Chart Time Series -->
+  <!-- charts -->
   <script>
     var ctx = document.getElementById('charts').getContext('2d');
     var myChart = new Chart(ctx, {
       type: 'bar',
       data: {
-        labels: ['24/03/2020', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: ['24/03/2020', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange', 'black', 'red'],
         datasets: [{
           label: '# of Votes',
-          data: [12, 19, 3, 5, 2, 3],
+          data: [12, 19, 3, 5, 2, 3, 5, 3, 1],
           backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
             'rgba(54, 162, 235, 0.2)',
@@ -256,6 +257,29 @@
           easing: 'easeOutBounce'
         }
       }
+    });
+  </script>
+
+  <!-- myChart -->
+  <script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var chart = new Chart(ctx, {
+      // The type of chart we want to create
+      type: 'line',
+
+      // The data for our dataset
+      data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+          label: 'My First dataset',
+          backgroundColor: 'rgb(255, 99, 132)',
+          borderColor: 'rgb(255, 99, 132)',
+          data: [0, 10, 5, 2, 20, 30, 45]
+        }]
+      },
+
+      // Configuration options go here
+      options: {}
     });
   </script>
 
