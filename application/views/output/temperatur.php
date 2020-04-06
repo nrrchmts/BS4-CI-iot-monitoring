@@ -17,6 +17,7 @@
     <!-- Main Content -->
     <div class="container-fluid">
 
+      <!-- Chart Row -->
       <div class="row">
         <div class="col-xl-8 col-lg-7">
           <!-- Area Chart -->
@@ -49,6 +50,7 @@
         </div>
       </div>
 
+      <!-- Table Row -->
       <div class="row">
         <div class="col-xl-6 col-lg-5">
           <div class="card shadow mb-4">
@@ -93,7 +95,6 @@
           </div>
         </div>
       </div>
-
 
     </div>
     <!-- /.container-fluid -->
