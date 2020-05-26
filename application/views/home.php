@@ -141,37 +141,6 @@
         </div>
       </div>
 
-      <!-- Chart Row -->
-      <div class="row">
-        <div class="col-md">
-          <!-- Time Series Chart -->
-          <div class="card shadow mb-4">
-            <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Grafik Batang</h6>
-            </div>
-            <div class="card-body">
-              <div class="chart-area">
-                <canvas id="myChart"></canvas>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md">
-          <!-- Area Chart -->
-          <div class="card shadow mb-4">
-            <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Uji Coba Chart</h6>
-            </div>
-            <div class="card-body">
-              <div class="chart-area">
-                <canvas id="charts"></canvas>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <!-- DataTable -->
       <div class="row">
         <div class="col-lg">
@@ -215,76 +184,7 @@
   </div>
   <!-- End Main Content -->
 
-  <!-- charts -->
-  <script>
-    var ctx = document.getElementById('charts').getContext('2d');
-    var myChart = new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: ['24/03/2020', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange', 'black', 'red'],
-        datasets: [{
-          label: '# of Votes',
-          data: [12, 19, 3, 5, 2, 3, 5, 3, 1],
-          backgroundColor: [
-            'rgba(255, 99, 132, 0.2)',
-            'rgba(54, 162, 235, 0.2)',
-            'rgba(255, 206, 86, 0.2)',
-            'rgba(75, 192, 192, 0.2)',
-            'rgba(153, 102, 255, 0.2)',
-            'rgba(255, 159, 64, 0.2)'
-          ],
-          borderColor: [
-            'rgba(255, 99, 132, 1)',
-            'rgba(54, 162, 235, 1)',
-            'rgba(255, 206, 86, 1)',
-            'rgba(75, 192, 192, 1)',
-            'rgba(153, 102, 255, 1)',
-            'rgba(255, 159, 64, 1)'
-          ],
-          borderWidth: 1
-        }]
-      },
-      options: {
-        scales: {
-          yAxes: [{
-            ticks: {
-              beginAtZero: true
-            }
-          }]
-        },
-        animation: {
-          duration: 1200,
-          easing: 'easeOutBounce'
-        }
-      }
-    });
-  </script>
-
-  <!-- myChart -->
-  <script>
-    var ctx = document.getElementById('myChart').getContext('2d');
-    var chart = new Chart(ctx, {
-      // The type of chart we want to create
-      type: 'line',
-
-      // The data for our dataset
-      data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-        datasets: [{
-          label: 'My First dataset',
-          backgroundColor: 'rgb(255, 99, 132)',
-          borderColor: 'rgb(255, 99, 132)',
-          data: [0, 10, 5, 2, 20, 30, 45]
-        }]
-      },
-
-      // Configuration options go here
-      options: {}
-    });
-  </script>
-
-  <!-- Notes
-  .data card merupakan 1 data terbaru
-  .data grafik dapat diubah berdasarkan kategori/parameter
-  .data tabel menggunakan pagination 10 baris dan dimulai dari data terbaru
-  -->
+  <!--   
+  * TODO: data card merupakan 1 data terbaru
+  * TODO: data grafik dapat diubah berdasarkan kategori/parameter
+  * TODO: data tabel menggunakan pagination 10 baris dan dimulai dari data terbaru -->
