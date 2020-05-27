@@ -34,7 +34,7 @@
                     <?=
                       // note : kenapa hanya s nama atributnya?
                       // coba liat query nya di getTemperature() model
-                      $temperatur['s'];
+                      $temperatur['suhu'];
                     ?>
                     <sup>o</sup>C
                   </div>
@@ -153,7 +153,7 @@
               <table id="dataTable" class="table table-responsive-sm table-striped table-hover text-center">
                 <thead>
                   <tr>
-                    <th scope="col">Tanggal & Waktu</th>
+                    <th scope="col">Watktu & Tanggal</th>
                     <th scope="col">Suhu Air (<sup>o</sup>C)</th>
                     <th scope="col">Keasaman (pH)</th>
                     <th scope="col">Amoniak (ppm)</th>
@@ -164,7 +164,14 @@
                 <tbody>
                   <?php foreach ($sektor as $sektor1) : ?>
                     <tr>
-                      <td><?= $sektor1['data_waktu']; ?></td>
+                      <td>
+                        <?=
+                          substr($sektor1['data_waktu'], 11, 5) . ',&nbsp;' .
+                            substr($sektor1['data_waktu'], 8, 2) . '/' .
+                            substr($sektor1['data_waktu'], 5, 2) . '/' .
+                            substr($sektor1['data_waktu'], 0, 4);
+                        ?>
+                      </td>
                       <td><?= $sektor1['suhu_air']; ?></td>
                       <td>7</td>
                       <td>1,2</td>

@@ -18,7 +18,7 @@ class Home extends CI_Controller
 
     // note : ini ngambil data dari methode getTemperature(), terus di render ke view lewat variabel temperatur
     // coba liat di home.php line 34
-    $data['temperatur'] = $this->Sektor_model->getTemperature();
+    $data['temperatur'] = $this->Sektor_model->getTemperatureCard();
 
     $this->load->view('templates/header', $data);
     $this->load->view('templates/sidebar');

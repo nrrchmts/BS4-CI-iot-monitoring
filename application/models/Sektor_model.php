@@ -16,9 +16,9 @@ class Sektor_model extends CI_Model
     return $this->db->get('sektor')->result_array();
   }
 
-  public function getTemperature()
+  public function getTemperatureCard()
   {
-    $query = $this->db->query("SELECT suhu_air as s FROM sektor ORDER BY id DESC LIMIT 1");
+    $query = $this->db->query("SELECT suhu_air as suhu FROM sektor ORDER BY id DESC LIMIT 1");
     return $query->row_array();
   }
 }
