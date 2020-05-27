@@ -162,9 +162,9 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <?php foreach ($sektor_1 as $sektor1) : ?>
+                  <?php foreach ($sektor as $sektor1) : ?>
                     <tr>
-                      <td><?= $sektor1['date'] . ',&nbsp;' . $sektor1['time']; ?></td>
+                      <td><?= $sektor1['data_waktu']; ?></td>
                       <td><?= $sektor1['suhu_air']; ?></td>
                       <td>7</td>
                       <td>1,2</td>

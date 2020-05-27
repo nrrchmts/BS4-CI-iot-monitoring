@@ -7,18 +7,18 @@ class Home extends CI_Controller
   {
     parent::__construct();
     $this->load->database();
-    $this->load->model('Sektor_1_model');
+    $this->load->model('Sektor_model');
   }
 
   public function index()
   {
     $data['title'] = 'Dashboard';
-    $data['sektor_1'] = $this->Sektor_1_model->getAllMonitoringdata();
+    $data['sektor'] = $this->Sektor_model->getAllMonitoringdata();
 
 
     // note : ini ngambil data dari methode getTemperature(), terus di render ke view lewat variabel temperatur
     // coba liat di home.php line 34
-    $data['temperatur'] = $this->Sektor_1_model->getTemperature();
+    $data['temperatur'] = $this->Sektor_model->getTemperature();
 
     $this->load->view('templates/header', $data);
     $this->load->view('templates/sidebar');
@@ -29,8 +29,8 @@ class Home extends CI_Controller
   public function temperatur()
   {
     $data['title'] = 'Temperatur';
-    $data['sektor_1'] = $this->Sektor_1_model->getAllMonitoringdata();
-    $data['data_grafik'] = $this->Sektor_1_model->getMonitoringGraph10();
+    $data['sektor'] = $this->Sektor_model->getAllMonitoringdata();
+    $data['data_grafik'] = $this->Sektor_model->getMonitoringGraph10();
 
     $this->load->view('templates/header', $data);
     $this->load->view('templates/sidebar');
