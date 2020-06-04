@@ -12,7 +12,7 @@ class Sektor_model extends CI_Model
   public function getMonitoringGraph10()
   {
     $this->db->order_by('id', 'DESC'); //Sorting by ID
-    $this->db->limit(10);
+    $this->db->limit(5);
     return $this->db->get('sektor')->result_array();
   }
 
