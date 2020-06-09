@@ -44,6 +44,8 @@
       height: 100%;
     }
   </style>
+
+  <link rel="stylesheet" href="<?= base_url('assets/'); ?>css/style.css">
 </head>
 
 <body id="page-top">

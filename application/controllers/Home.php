@@ -17,10 +17,8 @@ class Home extends CI_Controller
 
     $data['data_grafik'] = $this->Sektor_model->getMonitoringGraph10();
 
-
-    // note : ini ngambil data dari methode getTemperature(), terus di render ke view lewat variabel temperatur
-    // coba liat di home.php line 34
-    $data['temperatur'] = $this->Sektor_model->getTemperatureCard();
+    $data['suhu_air'] = $this->Sektor_model->getTemperatureCard();
+    $data['volume_air'] = $this->Sektor_model->getVolumeCard();
 
     $this->load->view('templates/header', $data);
     $this->load->view('templates/sidebar');

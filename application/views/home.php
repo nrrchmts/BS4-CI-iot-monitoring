@@ -23,18 +23,18 @@
       <div class="row">
         <!-- Temperature Card -->
         <div class="col-sm mb-4">
-          <div class="card border-left-primary shadow h-100 py-2">
+          <div class="card parameter-actual shadow h-100 py-2">
             <div class="card-body">
               <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
-                  <div class="text-xs font-weight-bold text-primary mb-1">
+                  <div class="text-xs font-weight-bold mb-1">
                     Temperatur
                   </div>
-                  <div class="h5 mb-0 font-weight-bold text-gray-800">
+                  <div class="h5 mb-0 font-weight-bold">
                     <?=
                       // note : kenapa hanya s nama atributnya?
                       // coba liat query nya di getTemperature() model
-                      $temperatur['suhu'];
+                      $suhu_air['suhu'];
                     ?>
                     <sup>o</sup>C
                   </div>
@@ -129,7 +129,7 @@
                     Volume
                   </div>
                   <div class="h5 mb-0 font-weight-bold text-gray-800">
-                    1200 L
+                    <?= $volume_air['volume'];  ?>
                   </div>
                 </div>
                 <div class="col-auto">
@@ -210,7 +210,7 @@
                       <td>7</td>
                       <td>1,2</td>
                       <td>8</td>
-                      <td>1200</td>
+                      <td><?= $sektor1['volume_air']; ?></td>
                     </tr>
                   <?php endforeach; ?>
                 </tbody>

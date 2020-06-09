@@ -35,8 +35,26 @@
   <script src="<?= base_url('assets/'); ?>js/demo/chart-area-demo.js"></script>
   <script src="<?= base_url('assets/'); ?>js/demo/chart-pie-demo.js"></script>
 
-  // home/area-chart
+
   <script>
+    // card-indicator
+    // Pseudo code
+    // Jquery tolong carikan elemen tag '' | let indicator = document.getElementsByTagName()
+    // jika nilai pada variabel indicator kurang dari sama dengan 24 dan lebih dari sama dengan 31, maka div yang mempunyai id="indicator" akan menambhkan class="bg-danger";
+    // selain itu bg="default"
+    const indicate = document.getElementsByClassName("parameter-actual");
+    const dataActual = <?= $suhu_air['suhu'];  ?>;
+
+    if (dataActual >= 24 && dataActual <= 31) {
+      indicate[0].classList.add("bg-default");
+      indicate[0].classList.add("border-left-primary");
+    } else {
+      indicate[0].classList.add("bg-danger");
+      indicate[0].classList.add("text-white");
+      indicate[0].classList.add("pulse");
+    }
+
+    // home/area-chart
     var ctx = document.getElementById("home-area-chart");
     var myLineChart = new Chart(ctx, {
       type: "line",
@@ -58,7 +76,7 @@
         // ],
         labels: [
           <?php foreach ($data_grafik as $sektor) : ?>
-            <?= '"' . $sektor['data_waktu'] . '"' . ',';  ?>
+            <?= '"' . substr($sektor['data_waktu'], 11, 5) . '"' . ',';  ?>
           <?php endforeach ?>
         ],
 
