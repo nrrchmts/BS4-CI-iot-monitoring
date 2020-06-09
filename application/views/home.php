@@ -22,7 +22,7 @@
       <!-- Card Value -->
       <div class="row">
         <!-- Temperature Card -->
-        <div class="col-sm mb-4">
+        <div class="col-md-6 col-lg mb-4">
           <div class="card parameter-actual shadow h-100 py-2">
             <div class="card-body">
               <div class="row no-gutters align-items-center">
@@ -48,7 +48,7 @@
         </div>
 
         <!-- pH Air Card -->
-        <div class="col-sm mb-4">
+        <div class="col-md-6 col-lg mb-4">
           <div class="card border-left-success shadow h-100 py-2">
             <div class="card-body">
               <div class="row no-gutters align-items-center">
@@ -69,7 +69,7 @@
         </div>
 
         <!-- Amoniak Card -->
-        <div class="col-sm mb-4">
+        <div class="col-md-6 col-lg mb-4">
           <div class="card border-left-info shadow h-100 py-2">
             <div class="card-body">
               <div class="row no-gutters align-items-center">
@@ -99,7 +99,7 @@
         </div>
 
         <!-- Dissolve Oxygen Card -->
-        <div class="col-sm mb-4">
+        <div class="col-md-6 col-lg mb-4">
           <div class="card border-left-warning shadow h-100 py-2">
             <div class="card-body">
               <div class="row no-gutters align-items-center">
@@ -108,7 +108,7 @@
                     DO
                   </div>
                   <div class="h5 mb-0 font-weight-bold text-gray-800">
-                    18 ppm
+                    18 mg/L
                   </div>
                 </div>
                 <div class="col-auto">
@@ -120,7 +120,7 @@
         </div>
 
         <!-- Volume Air Cards -->
-        <div class="col-sm mb-4">
+        <div class="col-md-12 col-lg mb-4">
           <div class="card border-left-danger shadow h-100 py-2">
             <div class="card-body">
               <div class="row no-gutters align-items-center">
@@ -188,11 +188,11 @@
                 <thead>
                   <tr>
                     <th scope="col">Watktu & Tanggal</th>
-                    <th scope="col">Suhu Air (<sup>o</sup>C)</th>
+                    <th scope="col">Suhu (<sup>o</sup>C)</th>
                     <th scope="col">Keasaman (pH)</th>
                     <th scope="col">Amoniak (ppm)</th>
-                    <th scope="col">DO Air (mg/l)</th>
-                    <th scope="col">Volume Air (Liter)</th>
+                    <th scope="col">DO (mg/l)</th>
+                    <th scope="col">Volume (L)</th>
                   </tr>
                 </thead>
                 <tbody>
