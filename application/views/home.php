@@ -23,18 +23,18 @@
       <div class="row">
         <!-- Temperature Card -->
         <div class="col-md-6 col-lg mb-4">
-          <div class="card border-left-primary shadow h-100 py-2">
+          <div class="card parameter-actual shadow h-100 py-2">
             <div class="card-body">
               <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
-                  <div class="text-xs font-weight-bold text-primary mb-1">
+                  <div class="text-xs font-weight-bold mb-1">
                     Temperatur
                   </div>
-                  <div class="h5 mb-0 font-weight-bold text-gray-800">
+                  <div class="h5 mb-0 font-weight-bold">
                     <?=
                       // note : kenapa hanya s nama atributnya?
                       // coba liat query nya di getTemperature() model
-                      $temperatur['suhu'];
+                      $suhu_air['suhu'];
                     ?>
                     <sup>o</sup>C
                   </div>
@@ -129,12 +129,46 @@
                     Volume
                   </div>
                   <div class="h5 mb-0 font-weight-bold text-gray-800">
-                    1200 L
+                    <?= $volume_air['volume'];  ?>
                   </div>
                 </div>
                 <div class="col-auto">
                   <i class="fas fa-water fa-2x text-gray-300"></i>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Graph -->
+      <div class="row">
+
+        <div class="col-xl-8 col-lg-7">
+          <!-- Area Chart -->
+          <div class="card border-left-success shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">Area Chart</h6>
+            </div>
+            <div class="card-body">
+              <div class="chart-area">
+                <canvas id="home-area-chart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Donut Chart -->
+        <div class="col-xl-4 col-lg-5">
+          <div class="card border-left-danger shadow mb-4">
+            <!-- Card Header - Dropdown -->
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">Donut Chart</h6>
+            </div>
+            <!-- Card Body -->
+            <div class="card-body mt-3 mb-4">
+              <div class="chart-pie pt-4">
+                <canvas id="home-pie-chart"></canvas>
               </div>
             </div>
           </div>
@@ -176,7 +210,7 @@
                       <td>7</td>
                       <td>1,2</td>
                       <td>8</td>
-                      <td>1200</td>
+                      <td><?= $sektor1['volume_air']; ?></td>
                     </tr>
                   <?php endforeach; ?>
                 </tbody>

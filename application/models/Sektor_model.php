@@ -21,4 +21,10 @@ class Sektor_model extends CI_Model
     $query = $this->db->query("SELECT suhu_air as suhu FROM sektor ORDER BY id DESC LIMIT 1");
     return $query->row_array();
   }
+
+  public function getVolumeCard()
+  {
+    $query = $this->db->query("SELECT volume_air as volume FROM sektor ORDER BY id DESC LIMIT 1");
+    return $query->row_array();
+  }
 }
