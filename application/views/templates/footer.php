@@ -110,12 +110,13 @@
           //   25000,
           //   40000,
           // ],
-
+          // MASIH ADA MASALAH
           data: [
             <?php foreach ($data_grafik as $sektor) :  ?>
               <?= $sektor['suhu_air'] . ',';  ?>
             <?php endforeach  ?>
           ],
+          // ./MASALAH
 
         }, ],
       },
