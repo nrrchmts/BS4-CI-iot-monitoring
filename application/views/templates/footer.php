@@ -43,6 +43,13 @@
     // Jquery tolong carikan elemen tag '' | let indicator = document.getElementsByTagName()
     // jika nilai pada variabel indicator kurang dari sama dengan 24 dan lebih dari sama dengan 31, maka div yang mempunyai id="indicator" akan menambhkan class="bg-danger";
     // selain itu bg="default"
+    // var a1 = [];
+    // var index = 0;
+    // <?php foreach ($data_grafik as $sektor) :  ?>
+    //   a1[index] = "<?= $sektor['suhu_air'] . ',';  ?>";
+    //   index++;
+    // <?php endforeach  ?>
+    // alert(a1);
     const indicate = document.getElementsByClassName("parameter-actual");
     const dataActual = <?= $suhu_air['suhu'];  ?>;
 
@@ -110,13 +117,12 @@
           //   25000,
           //   40000,
           // ],
-          // MASIH ADA MASALAH
+
           data: [
             <?php foreach ($data_grafik as $sektor) :  ?>
               <?= $sektor['suhu_air'] . ',';  ?>
-            <?php endforeach  ?>
+            <?php endforeach;  ?>
           ],
-          // ./MASALAH
 
         }, ],
       },
@@ -147,10 +153,7 @@
             ticks: {
               maxTicksLimit: 5,
               padding: 10,
-              // Include a dollar sign in the ticks
-              callback: function(value, index, values) {
-                return number_format(value) + ` C`;
-              },
+
             },
             gridLines: {
               color: "rgb(234, 236, 244)",
@@ -182,7 +185,7 @@
             label: function(tooltipItem, chart) {
               var datasetLabel =
                 chart.datasets[tooltipItem.datasetIndex].label || "";
-              return datasetLabel + " " + number_format(tooltipItem.yLabel) + " Celcius";
+              return datasetLabel + " " + tooltipItem.yLabel + " Celcius";
             },
           },
         },
@@ -282,7 +285,7 @@
               padding: 10,
               // Include a dollar sign in the ticks
               callback: function(value, index, values) {
-                return number_format(value) + ` ppm`;
+                return (value) + ` ppm`;
               },
             },
             gridLines: {
@@ -315,7 +318,7 @@
             label: function(tooltipItem, chart) {
               var datasetLabel =
                 chart.datasets[tooltipItem.datasetIndex].label || "";
-              return datasetLabel + " " + number_format(tooltipItem.yLabel) + " Part Per Million";
+              return datasetLabel + " " + tooltipItem.yLabel + " Part Per Million";
             },
           },
         },
@@ -379,8 +382,12 @@
           // ],
 
           data: [
+            <?php
+            $volumeCalc = ($setValue['field_length'] * $setValue['field_width'] * ($setValue['field_height'] - $volume_air['volume'])) / 1000;
+            ?>
             <?php foreach ($data_grafik as $sektor) :  ?>
-              <?= $sektor['volume_air'] . ',';  ?>
+
+              <?= $volumeCalc . ',';  ?>
             <?php endforeach  ?>
           ],
 
@@ -415,7 +422,7 @@
               padding: 10,
               // Include a dollar sign in the ticks
               callback: function(value, index, values) {
-                return number_format(value) + ` L`;
+                return value + ` L`;
               },
             },
             gridLines: {
@@ -448,7 +455,7 @@
             label: function(tooltipItem, chart) {
               var datasetLabel =
                 chart.datasets[tooltipItem.datasetIndex].label || "";
-              return datasetLabel + " " + number_format(tooltipItem.yLabel) + " Part Per Million";
+              return datasetLabel + " " + tooltipItem.yLabel + " Part Per Million";
             },
           },
         },
