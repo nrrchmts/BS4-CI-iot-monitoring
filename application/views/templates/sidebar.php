@@ -28,16 +28,16 @@
 
   <!-- Nav Item - Pages Collapse Menu -->
   <li class="nav-item">
-    <a class="nav-link" href="<?= base_url('home/temperatur'); ?>"><i class="fas fa-fw fa-thermometer-half"></i>
-      <span>Temperatur</span></a>
     <a class="nav-link" href="#"><i class="fas fa-fw fa-thermometer-half"></i>
-      <span>Kadar pH</span></a>
+      <span>Temperatur <sup><i class="text-danger fas fa-arrow-alt-circle-up"></i></sup></span></a>
+    <a class="nav-link" href="#"><i class="fas fa-fw fa-thermometer-half"></i>
+      <span>Kadar pH <sup><i class="text-danger fas fa-arrow-alt-circle-up"></i></sup></span></a>
     <a class="nav-link" href="#"><i class="fas fa-fw fa-tint"></i>
-      <span>Kadar Amoniak</span></a>
+      <span>Kadar Amoniak <sup><i class="text-danger fas fa-arrow-alt-circle-up"></i></sup></span></a>
     <a class="nav-link" href="#"><i class="fas fa-fw fa-radiation"></i>
-      <span>Oksigen Terlarut</span></a>
+      <span>Oksigen Terlarut <sup><i class="text-danger fas fa-arrow-alt-circle-up"></i></sup> </span></a>
     <a class="nav-link" href="#"><i class="fas fa-fw fa-water"></i>
-      <span>Volume Air</span></a>
+      <span>Volume Air <sup><i class="text-danger fas fa-arrow-alt-circle-up"></i></sup> </span></a>
   </li>
 
   <!-- Divider -->

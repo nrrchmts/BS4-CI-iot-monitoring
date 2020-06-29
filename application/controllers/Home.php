@@ -8,6 +8,7 @@ class Home extends CI_Controller
     parent::__construct();
     $this->load->database();
     $this->load->model('Sektor_model');
+    $this->load->model('Preferences_model');
   }
 
   public function index()
@@ -19,6 +20,10 @@ class Home extends CI_Controller
 
     $data['suhu_air'] = $this->Sektor_model->getTemperatureCard();
     $data['volume_air'] = $this->Sektor_model->getVolumeCard();
+    // $data[]
+    $data['amoniak'] = $this->Sektor_model->getAmoniakCard();
+
+    $data['setValue'] = $this->Preferences_model->getSettingValue();
 
     $this->load->view('templates/header', $data);
     $this->load->view('templates/sidebar');

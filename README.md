@@ -7,7 +7,19 @@ Sementara Aplikasi ini hanya berisikan trial &amp; error
 
 ## TODO List
 
-- Menambahkan graph prototype pada home
+- tabs dan dropdown pada graph
+
+  - perhari
+  - perminggu
+  - perbulan
+  - pertahun
+
+    .apabila perhari, tampilkan 3 data terbaru pada grafik
+    .apabila perminggu, tampilkan 4 data 1 data pertama dan lompat 4 data setelahnya
+    .apabila perbulan blblabla
+
+- buat page settings untuk menyesuaikan nilai minimum nilai minimum
+  - ini diperlukan untuk pengembangan ke depannya agar dapat digunakan pada hewan lain
 - nantikan lagi
 
 ## Referensi

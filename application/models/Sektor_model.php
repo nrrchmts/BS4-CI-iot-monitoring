@@ -22,6 +22,12 @@ class Sektor_model extends CI_Model
     return $query->row_array();
   }
 
+  public function getAmoniakCard()
+  {
+    $query = $this->db->query("SELECT amoniak as amoniak FROM sektor ORDER BY id DESC LIMIT 1");
+    return $query->row_array();
+  }
+
   public function getVolumeCard()
   {
     $query = $this->db->query("SELECT volume_air as volume FROM sektor ORDER BY id DESC LIMIT 1");
