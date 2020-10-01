@@ -1,4 +1,4 @@
-# BS4-CI-iot-monitoring
+# Internet of Things - Water Quality Monitoring
 
 Sementara Aplikasi ini hanya berisikan trial &amp; error
 
@@ -23,26 +23,9 @@ Sementara Aplikasi ini hanya berisikan trial &amp; error
 - nantikan lagi
 
 ## Sensor
-### MQ-135
+ [MQ-135](https://github.com/Cha0s0000/Utopian/blob/master/%5BArduino%20basics%20tutorials%5D%20use%20MQ135%20air%20quality%20detecting%20module.md)
 ```
-const int gasSensor =0;
-void setup(){
-  Serial.begin(9600);      // sets the serial port to 9600
-}
-void loop(){
-  float voltage;
-  voltage = getVoltage(gasSensor);
-  
-  Serial.println(voltage);
-  delay(1000);
-}
- 
-float getVoltage(int pin){
-  return (analogRead(pin) * 0.004882814);
-  // This equation converts the 0 to 1023 value that analogRead()
-  // returns, into a 0.0 to 5.0 value that is the true voltage
-  // being read at that pin.
-}
+this is code
 ```
 
 ## Referensi
