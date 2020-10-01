@@ -23,7 +23,7 @@ Sementara Aplikasi ini hanya berisikan trial &amp; error
 - nantikan lagi
 
 ## Sensor
-# MQ-135
+### MQ-135
 ```
 const int gasSensor =0;
 void setup(){
